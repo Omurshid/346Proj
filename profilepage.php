@@ -1,12 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <body>
-        <h1>Welcome to your profile</h1>
-        <p>Please enter some irrelevant crap here!</p>
+        
+    <?php session_start();
+      if(isset($_SESSION['email'])) echo $_SESSION['test'];
+      else echo 'session problem';
+    ?>
 
         <table>
             <tr>
-                <td>View your resume builds</td>
+                <td>View your resume build</td>
                 <td><input type="submit" value="View Resumes"></td>
             </tr>
 

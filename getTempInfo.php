@@ -9,7 +9,7 @@
                     require_once('./mysqliConnect.php');
 
                     // Create a query for the database
-                    $query = "SELECT tempname, font, color, artist, password FROM Temp";
+                    $query = "SELECT tempname, font, color, artist FROM Temp";
 
                     // Get a response from the database by sending the connection
                     // and the query
@@ -31,10 +31,10 @@
                     while($row = mysqli_fetch_array($response)){
 
                     echo '<tr><td align="left">' . 
-                    $row['Template Name'] . '</td><td align="left">' . 
-                    $row['Font'] . '</td><td align="left">' .
-                    $row['Color'] . '</td><td align="left">' . 
-                    $row['Artist'] . '</td><td align="left"></tr>';
+                    $row['tempname'] . '</td><td align="left">' . 
+                    $row['font'] . '</td><td align="left">' .
+                    $row['color'] . '</td><td align="left">' . 
+                    $row['artist'] . '</td><td align="left"></tr>';
                     }
 
                     echo '</table>';
